@@ -28,8 +28,6 @@ public class SeleniumBasics {
 		driver.close();
 		
 		
-		
-
 	}
 
 }

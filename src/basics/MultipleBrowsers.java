@@ -8,7 +8,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class MultipleBrowsers {
 
 	public static void main(String[] args) {
-
 		String browserName= "Chrome";
 		WebDriver driver= null;
 		
@@ -30,7 +29,6 @@ public class MultipleBrowsers {
 		driver.get("https://www.google.com");
 		
 		driver.quit();
-		
 		
 		
 	}

@@ -24,10 +24,11 @@ public class SeleniumBasics {
 		String URL=driver.getCurrentUrl();
 		System.out.println(URL);
 		
-		//is closing browser
-		driver.close();
+		//is used to close current window of browser
+		//driver.close();
 		
-		
+		//close entire browser
+		driver.quit();
 	}
 
 }

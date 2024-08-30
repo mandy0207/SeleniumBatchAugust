@@ -1,5 +1,7 @@
 package basics;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,7 +29,8 @@ public class LearnXpath {
 		driver.findElement(By.xpath("//*[@class='buttons']/*[@value='Log in']")).click();
 		//driver.findElement(By.xpath("//*[@class='button- login-button']")).click();
 		
-		driver.findElement(By.xpath("(//*[@class='list'])[1]/li[4]/a")).click();
+		driver.findElement(By.xpath("(//*[@class='list'])[1]/li[4]/a")).click();	
+	
 		driver.findElement(By.xpath("//h2[@class='product-title']//*[contains(text(),'Blue Jeans')]")).click();
 		
 		WebElement qty = driver.findElement(By.xpath("//*[contains(@id,'_EnteredQuantity')]"));

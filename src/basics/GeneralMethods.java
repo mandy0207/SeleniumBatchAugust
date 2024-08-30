@@ -29,6 +29,7 @@ public class GeneralMethods {
 	
 		System.out.println(toolTip);
 		
+		//to grab css value of any web element
 		String cssValue=heading.getCssValue("display");
 		
 		System.out.println(cssValue);

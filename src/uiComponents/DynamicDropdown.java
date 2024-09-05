@@ -9,22 +9,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DynamicDropdown {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://selenium.qabible.in/jquery-select.php");
 		
-		driver.findElement(By.xpath("//*[contains(@class,'-selection--multiple')]")).sendKeys("new");
+		driver.findElement(By.xpath("//*[@aria-label='Search']")).sendKeys("new");
 		
 		List<WebElement> states = driver.findElements(By.xpath("//*[contains(@class,'-results__option')]/li"));
 		
-//		for(int i =0;i<states.size();i++) {
-//			if(states.get(i).getText().equalsIgnoreCase("new jersey")) {
-//				states.get(i).click();
-//				break;
-//			}
-//		}
+
+		
 		
 		for(WebElement state : states) {
 			if(state.getText().equalsIgnoreCase("new york")) {
@@ -32,6 +28,11 @@ public class DynamicDropdown {
 				break;
 			}
 		}
+		Thread.sleep(2000);
+		
+		//for second selection
+		driver.findElement(By.xpath("//*[@aria-label='Search']")).sendKeys("ca");
+		//follow same steps
 		
 		driver.quit();
 		

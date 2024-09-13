@@ -32,10 +32,13 @@ public class Learnwaits {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));   
 		wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.cssSelector(".progress-label")), "Complete!"));
+		
 		String text=driver.findElement(By.cssSelector(".progress-label")).getText();
 		System.out.println(text);
 		
 		driver.quit();
+		
+		
 		
 		
 	}

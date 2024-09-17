@@ -17,17 +17,18 @@ public class WebTesting {
 	 * 5. If two test cases have same priority, alphabetical order will take precedence
 	 * 6. BeforeTest will execute once only before all the test cases present inside class
 	 * 7. AfterTest will execute once only after all the test cases present inside class
+	 * 8. Before Class will execute after BeforeTest in a class
 	 */
 	
-	@Test(priority=2)
+	@Test(priority=2, groups="Smoke")
 	public void myFirstTest() {
 		System.out.println("I am in first web test");
 	}
 	
-	@Test(priority=1)
-	public void mySecondTest(){
-		System.out.println("I am in second web test");
-	}
+	/*
+	 * @Test(priority=1) public void mySecondTest(){
+	 * System.out.println("I am in second web test"); }
+	 */
 	
 	@BeforeTest
 	public void beforeTest() {
@@ -39,15 +40,13 @@ public class WebTesting {
 		System.out.println("I am in after web test");
 	}
 	
-	@BeforeMethod
-	public void beforeMethod() {
-		System.out.println("I am in before method");
-	}
-	
-	@AfterMethod
-	public void afterMethod() {
-		System.out.println("I am in after method");
-	}
+	/*
+	 * @BeforeMethod public void beforeMethod() {
+	 * System.out.println("I am in before method"); }
+	 * 
+	 * @AfterMethod public void afterMethod() {
+	 * System.out.println("I am in after method"); }
+	 */
 	
 	
 //	@Test

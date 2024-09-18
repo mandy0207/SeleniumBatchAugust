@@ -1,9 +1,9 @@
 package learnTestNG;
 
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class WebTesting {
@@ -23,6 +23,12 @@ public class WebTesting {
 	@Test(priority=2, groups="Smoke")
 	public void myFirstTest() {
 		System.out.println("I am in first web test");
+	}
+	
+	@Test
+	@Parameters({"userName", "password"})
+	public void parameterTest(@Optional String userName, @Optional String password) {
+		System.out.println(userName + " "+ password);
 	}
 	
 	/*

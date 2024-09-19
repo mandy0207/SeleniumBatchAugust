@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="learnTestNG.Dummyclass">
+      <class name="assertions.SoftAssertion">
         <methods>
-          <include name="beforetest"/>
-          <include name="mytest2"/>
+          <include name="softAssertTest"/>
         </methods>
-      </class> <!-- learnTestNG.Dummyclass -->
+      </class> <!-- assertions.SoftAssertion -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

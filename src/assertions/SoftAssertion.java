@@ -9,8 +9,7 @@ public class SoftAssertion {
 	@Test
 	public void softAssertTest() {
 		/**
-		 * whenever soft assertion fails it will not stop the program, abruptly.
-		 * 
+		 * whenever soft assertion fails it will not stop the program, abruptly. 
 		 * softAssert.assertAll(); store all failures and will throw at end of program
 		 */
 		SoftAssert softAssert= new SoftAssert();

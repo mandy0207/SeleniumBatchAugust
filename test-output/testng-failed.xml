@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="assertions.SoftAssertion">
+      <class name="learnExtentReports.LearnReporting">
         <methods>
-          <include name="softAssertTest"/>
+          <include name="generateReport"/>
+          <include name="mytest2"/>
         </methods>
-      </class> <!-- assertions.SoftAssertion -->
+      </class> <!-- learnExtentReports.LearnReporting -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

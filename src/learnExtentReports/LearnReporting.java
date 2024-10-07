@@ -21,7 +21,7 @@ public class LearnReporting {
 		reporter.config().setReportName("Obsqura Automation");
 		reporter.config().setDocumentTitle("Obsqura Zone");
 		
-		 extent =new  ExtentReports();
+		extent =new  ExtentReports();
 		extent.attachReporter(reporter);
 		extent.setSystemInfo("QA", "Adithya");
 		extent.setSystemInfo("Environment", "STAGING");
@@ -29,7 +29,7 @@ public class LearnReporting {
 	
 	@Test
 	public void mytest() {
-		 ExtentTest test = extent.createTest("mytest");
+		ExtentTest test = extent.createTest("mytest");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://google.com/");
